@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
       }
     ]
   })
-  .then((dbProductData) => res.json(dbProductData))
+  .then((dbTagData) => res.json(dbTagData))
     .catch((err) => {
       res.status(500).json(err);
     })
@@ -35,7 +35,7 @@ router.get('/:id', (req, res) => {
       }
     ]
   })
-  .then((dbProductData) => res.json(dbProductData))
+  .then((dbTagData) => res.json(dbTagData))
     .catch((err) => {
       res.status(500).json(err);
     })
@@ -44,7 +44,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   // create a new tag
   Tag.create(req.body)
-  .then((dbProductData) => res.json(dbProductData))
+  .then((dbTagData) => res.json(dbTagData))
   .catch((err) => {
     res.status(500).json(err);
   })
@@ -57,7 +57,7 @@ router.put('/:id', (req, res) => {
       id: req.params.id
     },
   })
-  .then((dbProductData) => res.json(dbProductData))
+  .then((dbTagData) => res.json(dbTagData))
     .catch((err) => {
       res.status(500).json(err);
     })
@@ -70,7 +70,7 @@ router.delete('/:id', (req, res) => {
       id: req.params.id
     },
   })
-  .then((dbProductData) => res.json(dbProductData))
+  .then((dbTagData) => res.json(dbTagData))
     .catch((err) => {
       res.status(500).json(err);
     })
